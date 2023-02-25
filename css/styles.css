@@ -101,8 +101,7 @@ body {
   display: flex;
   gap: 40px;
 }
-.header-item {
-}
+
 .header-link {
   font-weight: 500;
   font-size: 16px;
@@ -139,8 +138,7 @@ body {
   display: flex;
   gap: 40px;
 }
-.header-address-item {
-}
+
 .header-address-link {
   font-size: 16px;
   line-height: 1.5;
@@ -217,8 +215,6 @@ body {
   height: 112px;
   background-color: var(--light-color);
   border-radius: 4px;
-}
-.features-icon {
 }
 
 .features-item-title {
@@ -323,9 +319,6 @@ body {
   background-color: var(--pressed-state-color);
 }
 
-.team-soc-icon {
-}
-
 /*-------------------CUSTOMERS-------------------*/
 .customers {
   padding-top: 130px;
@@ -406,8 +399,6 @@ body {
   align-items: baseline;
 }
 
-.footer-soc {
-}
 .footer-soc-title {
   font-weight: 500;
   font-size: 16px;
@@ -437,8 +428,6 @@ body {
   transition-property: background-color;
   transition: background-color var(--hover-transition);
 }
-.footer-soc-icon {
-}
 
 .footer-soc-link:is(:hover, :focus) {
   background-color: var(--success-color);
@@ -455,8 +444,7 @@ body {
   gap: 24px;
   margin-bottom: 72px;
 }
-.portfolio-item {
-}
+
 .portfolio-item-btn {
   font-family: inherit;
   font-weight: 500;
@@ -487,8 +475,6 @@ body {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
-}
-.portfolio-box-item {
 }
 
 .portfolio-box-link {
@@ -544,6 +530,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
+/*-------------------------------BACKDROP-----------------------------------------*/
 
 .backdrop {
   position: fixed;
@@ -559,7 +546,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) skew(0);
   width: 408px;
-  min-height: 576px;
+  min-height: 584px;
   background-color: var(--modal-bg-color);
   padding: 24px;
   transition: transform 300ms linear;
@@ -580,10 +567,136 @@ body {
   margin-left: auto;
   padding: 0;
   cursor: pointer;
+  margin-bottom: 24px;
 }
 
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--dark-color);
+  margin-bottom: 6px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--text-color);
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+}
+
+.input-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--subtle-text-color);
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.modal-field {
+  margin-bottom: 8px;
+}
+.input-wrap {
+  position: relative;
+}
+.modal-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.modal-input:focus {
+  border-color: var(--primary-brand-color);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--primary-brand-color);
+}
+.modal-message {
+  display: block;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--text-color);
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+}
+.check-text {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+  display: flex;
+}
+.check-text::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.input-check:checked + .check-text::before {
+  background-color: var(--pressed-state-color);
+  border: none;
+  background-image: url(../images/check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.input-check:focus + .check-text::before {
+  border-color: var(--pressed-state-color);
+}
+.check-policy {
+  color: var(--primary-brand-color);
+}
+
+.form-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--additional-color);
+  cursor: pointer;
+  background: var(--primary-brand-color);
+  border-radius: 4px;
+  padding: 16px 32px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--hover-transition);
+  display: block;
+  margin: 0 auto;
+  width: 169px;
+  height: 56px;
+}
+.form-btn:hover,
+.form-btn:focus {
+  background-color: var(--pressed-state-color);
+}
+
+.modal-field-message {
+  margin-bottom: 16px;
+}
+
+.modal-field-checkbox {
+  margin-bottom: 24px;
 }
