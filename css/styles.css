@@ -395,10 +395,14 @@ body {
 }
 .footer-container {
   display: flex;
-  gap: 120px;
   align-items: baseline;
 }
-
+.footer-left {
+  margin-right: 120px;
+}
+.footer-soc {
+  margin-right: 80px;
+}
 .footer-soc-title {
   font-weight: 500;
   font-size: 16px;
@@ -431,6 +435,62 @@ body {
 
 .footer-soc-link:is(:hover, :focus) {
   background-color: var(--success-color);
+}
+.footer-form {
+}
+.subscribe {
+  display: flex;
+  gap: 24px;
+}
+.subscribe-title {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--additional-color);
+  margin-bottom: 16px;
+}
+.subscribe-input {
+  width: 264px;
+  height: 40px;
+  font-size: 12px;
+  color: var(--accent-color);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  padding: 8px 16px;
+  outline: transparent;
+}
+
+.subscribe-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.submit-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--additional-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+  background: var(--primary-brand-color);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color var(--hover-transition);
+  border: none;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: var(--pressed-state-color);
 }
 
 /*-------------------------------PORTFOLIO-----------------------------------------*/
@@ -568,6 +628,17 @@ body {
   padding: 0;
   cursor: pointer;
   margin-bottom: 24px;
+  transition: background-color var(--hover-transition);
+}
+.modal-close:is(:hover, :focus) {
+  background-color: var(--pressed-state-color);
+}
+.modal-close-button {
+  transition: fill var(--hover-transition);
+}
+
+.modal-close:is(:hover, :focus) .modal-close-button {
+  fill: var(--additional-color);
 }
 
 .is-hidden {
@@ -578,12 +649,11 @@ body {
 
 .modal-title {
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--dark-color);
-  margin-bottom: 6px;
+  margin-bottom: 16px;
 }
 
 .modal-input {
@@ -596,18 +666,28 @@ body {
   background-color: transparent;
   padding-left: 38px;
   outline: transparent;
+  transition: border-color var(--hover-transition);
+}
+.modal-input:focus,
+.modal-message:focus {
+  border-color: var(--primary-brand-color);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--primary-brand-color);
 }
 
 .input-text {
   font-size: 12px;
-  line-height: 1.17;
+  line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: var(--subtle-text-color);
   margin-bottom: 4px;
-  display: inline-block;
 }
 
 .modal-field {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 8px;
 }
 .input-wrap {
@@ -618,16 +698,10 @@ body {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-}
-.modal-input:focus {
-  border-color: var(--primary-brand-color);
+  transition: fill var(--hover-transition);
 }
 
-.modal-input:focus + .modal-icon {
-  fill: var(--primary-brand-color);
-}
 .modal-message {
-  display: block;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -638,6 +712,10 @@ body {
   padding: 8px 16px;
   outline: transparent;
   resize: none;
+  transition: border-color var(--hover-transition);
+}
+.modal-message::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 .check-text {
   font-size: 12px;
@@ -686,7 +764,7 @@ body {
   display: block;
   margin: 0 auto;
   width: 169px;
-  height: 56px;
+  transition: background-color var(--hover-transition);
 }
 .form-btn:hover,
 .form-btn:focus {
@@ -694,6 +772,8 @@ body {
 }
 
 .modal-field-message {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 16px;
 }
 

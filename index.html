@@ -379,7 +379,7 @@
         </div>
       </section>
     </main>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
           <svg class="modal-close-button" width="8" height="8">
@@ -458,7 +458,7 @@
 
     <footer class="footer">
       <div class="container footer-container">
-        <div>
+        <div class="footer-left">
           <a class="footer-logo link" href="./index.html">
             <span class="footer-logo-part">Web</span>Studio</a
           >
@@ -499,6 +499,24 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-form">
+          <p class="subscribe-title">Subscribe</p>
+          <form class="subscribe">
+            <input
+              type="email"
+              name="subscribe-email"
+              id="subscribe-email"
+              placeholder="E-mail"
+              class="subscribe-input"
+            />
+            <button type="submit" class="submit-btn">
+              Subscribe
+              <svg class="subscribe-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-subscribe"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
